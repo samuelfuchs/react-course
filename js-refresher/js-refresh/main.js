@@ -39,24 +39,48 @@ const myFnc = () => {
 // in a class we have: properties & classes
 // properties are variables
 // methods are funcions
-class Human {
-  constructor() {
-    this.gender = 'male'
-  }
 
-  printGender() {
+// class Human {
+//   constructor() {
+//     this.gender = 'male'
+//   }
+
+//   printGender() {
+//     console.log(this.gender)
+//   }
+// }
+
+// class Person extends Human {
+//   constructor() {
+//     super()
+//     this.name = 'Max'
+//     this.gender = 'female'
+//   }
+
+//   printMyName() {
+//     console.log(this.name)
+//   }
+// }
+
+// const person = new Person()
+// person.printMyName()
+// person.printGender()
+
+// ===== Classes, Properties and Methods =====
+
+class Human {
+  gender = 'male'
+
+  printGender = () => {
     console.log(this.gender)
   }
 }
 
 class Person extends Human {
-  constructor() {
-    super()
-    this.name = 'Max'
-    this.gender = 'female'
-  }
+  name = 'Max'
+  gender = 'female'
 
-  printMyName() {
+  printMyName = () => {
     console.log(this.name)
   }
 }
