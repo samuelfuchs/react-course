@@ -123,9 +123,34 @@ const myFnc = () => {
 // console.log(filter(1, 2, 3))
 
 // ===== Destructuring =====
-// Array destructuring
-const numbers = [1, 2, 3]
-;[num1, , num3] = numbers
-console.log(num1, num3)
 
-// Object destructuring
+// // Array destructuring
+// const numbers = [1, 2, 3]
+// ;[num1, , num3] = numbers
+// console.log(num1, num3)
+
+// // Object destructuring
+
+// ===== Reference and Primitive Types Refresher =====
+
+// objs and arr are object types - we only copy a pointer, not the entire thing.
+// const person = {
+//   name: 'max',
+// }
+
+// const secondPerson = person
+
+// person.name = 'Manu'
+
+// console.log(secondPerson)
+
+// to copy the entire thing we use the spread operator:
+const person = {
+  name: 'max',
+}
+
+const secondPerson = { ...person } // this is a real copy!
+
+person.name = 'Manu'
+
+console.log(secondPerson)
