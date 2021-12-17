@@ -145,12 +145,22 @@ const myFnc = () => {
 // console.log(secondPerson)
 
 // to copy the entire thing we use the spread operator:
-const person = {
-  name: 'max',
-}
+// const person = {
+//   name: 'max',
+// }
 
-const secondPerson = { ...person } // this is a real copy!
+// const secondPerson = { ...person } // this is a real copy!
 
-person.name = 'Manu'
+// person.name = 'Manu'
 
-console.log(secondPerson)
+// console.log(secondPerson)
+
+// ===== Refreshing Array Functions =====
+
+const numbers = [1, 2, 3]
+const doubleNumArray = numbers.map((num) => {
+  return num * 2
+})
+
+console.log(numbers)
+console.log(doubleNumArray)
