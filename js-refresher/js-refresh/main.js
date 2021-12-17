@@ -68,23 +68,56 @@ const myFnc = () => {
 
 // ===== Classes, Properties and Methods =====
 
-class Human {
-  gender = 'male'
+// class Human {
+//   gender = 'male'
 
-  printGender = () => {
-    console.log(this.gender)
-  }
+//   printGender = () => {
+//     console.log(this.gender)
+//   }
+// }
+
+// class Person extends Human {
+//   name = 'Max'
+//   gender = 'female'
+
+//   printMyName = () => {
+//     console.log(this.name)
+//   }
+// }
+
+// const person = new Person()
+// person.printMyName()
+// person.printGender()
+
+// ===== The Spread & Rest Operator =====
+// symbolized by '...'
+
+// Spread Operator
+// Used to split up array elements OR object properties
+
+const numbers = [1, 2, 3]
+const newNumbers = [...numbers, 4]
+
+console.log(newNumbers)
+
+// --
+
+const person = {
+  name: 'Max',
 }
 
-class Person extends Human {
-  name = 'Max'
-  gender = 'female'
-
-  printMyName = () => {
-    console.log(this.name)
-  }
+const newPerson = {
+  ...person,
+  age: 28,
 }
 
-const person = new Person()
-person.printMyName()
-person.printGender()
+console.log(newPerson)
+
+// Rest operator
+// Used to merge a list of function arguments into an array
+
+const filter = (...args) => {
+  return args.filter((el) => el === 1)
+}
+
+console.log(filter(1, 2, 3))
