@@ -95,29 +95,37 @@ const myFnc = () => {
 // Spread Operator
 // Used to split up array elements OR object properties
 
+// const numbers = [1, 2, 3]
+// const newNumbers = [...numbers, 4]
+
+// console.log(newNumbers)
+
+// // --
+
+// const person = {
+//   name: 'Max',
+// }
+
+// const newPerson = {
+//   ...person,
+//   age: 28,
+// }
+
+// console.log(newPerson)
+
+// // Rest operator
+// // Used to merge a list of function arguments into an array
+
+// const filter = (...args) => {
+//   return args.filter((el) => el === 1)
+// }
+
+// console.log(filter(1, 2, 3))
+
+// ===== Destructuring =====
+// Array destructuring
 const numbers = [1, 2, 3]
-const newNumbers = [...numbers, 4]
+;[num1, , num3] = numbers
+console.log(num1, num3)
 
-console.log(newNumbers)
-
-// --
-
-const person = {
-  name: 'Max',
-}
-
-const newPerson = {
-  ...person,
-  age: 28,
-}
-
-console.log(newPerson)
-
-// Rest operator
-// Used to merge a list of function arguments into an array
-
-const filter = (...args) => {
-  return args.filter((el) => el === 1)
-}
-
-console.log(filter(1, 2, 3))
+// Object destructuring
